@@ -10,7 +10,7 @@
 #include <asf.h>
 
 
-void select_mux(const bool S0, const bool S1, const bool S2) {
+void select_mux(const bool S2, const bool S1, const bool S0) {
 	port_pin_set_output_level(MUX_S0, S0);
 	port_pin_set_output_level(MUX_S1, S1);
 	port_pin_set_output_level(MUX_S2, S2);

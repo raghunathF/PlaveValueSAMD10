@@ -10,9 +10,9 @@
  */
 
 #include "PlaceValueIRReadControl.h"
+#include "globalDefines.h"
 #include <asf.h>
 
-uint32_t cubes_detected = 0;
 
 bool detect_cube(bool S0, bool S1, bool S2, uint8_t place) {
 	uint16_t value = 0;
@@ -36,7 +36,7 @@ bool detect_cube(bool S0, bool S1, bool S2, uint8_t place) {
 			break;
 	}
 	
-	if (value > 200) {
+	if (value > CUBE_DETECT_THRESHOLD) {
 		return true;
 	} else {
 		return false;
@@ -50,11 +50,11 @@ bool detect_cube(bool S0, bool S1, bool S2, uint8_t place) {
 uint32_t read_all_values(){
 	uint8_t i, place;
 	uint8_t ind;
-	volatile bool S0;
-	volatile bool S1;
-	volatile bool S2;
-	volatile bool cube;
-	cubes_detected = 0;
+	static bool S0;
+	static bool S1;
+	static bool S2;
+    static bool cube;
+	volatile uint32_t cubes_detected = 0;
 	
 	for (i = 0; i < 8; i++)
 	{
@@ -67,7 +67,7 @@ uint32_t read_all_values(){
 			// Put boolean value from detect cube at place indicated by ind
 			//delay_ms(10);
 			cube = detect_cube(S0, S1, S2, place);
-			delay_ms(10);
+			//delay_ms(10);
 			cubes_detected = cubes_detected | ( (((uint32_t)cube) & 0x1) << ind );
 			//delay_ms(10);
 		}
@@ -84,5 +84,25 @@ uint32_t read_all_values(){
 		cube = detect_cube(S0, S1, S2, place);
 		cubes_detected = cubes_detected | ( (((uint32_t)cube) & 0x1) << ind );
 	}
-	delay_ms(10);
+	return cubes_detected;
+	//delay_ms(10);
 }
+
+
+/*
+void readAllColumns()
+{
+	uint8_t i =0;
+	for(i=0;i<)
+	{
+		for(j=0;)
+		{
+			select_mux(S0, S1, S2);
+			= detectCube();
+			 = read_ones();
+			 = read_tens();
+			 = read_hndrds();
+		}
+	}
+}
+*/

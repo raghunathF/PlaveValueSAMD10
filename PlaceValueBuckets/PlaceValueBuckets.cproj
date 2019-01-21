@@ -171,14 +171,14 @@
         <documentation help="http://asf.atmel.com/docs/3.40.0/common.applications.user_application.sam0_system.user_board.atsamd10d14am/html/index.html" />
         <offline-documentation help="" />
         <dependencies>
-          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.40.0" />
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.25.0" />
         </dependencies>
         <project id="common.applications.user_application.sam0_system.user_board.atsamd10d14am" value="Add" config="" content-id="Atmel.ASF" />
         <board id="board.user_board.samd10dm" value="Add" config="" content-id="Atmel.ASF" />
       </framework-data>
     </AsfFrameworkConfig>
     <avrtool>com.atmel.avrdbg.tool.samice</avrtool>
-    <avrtoolserialnumber>260106424</avrtoolserialnumber>
+    <avrtoolserialnumber>260100375</avrtoolserialnumber>
     <avrdeviceexpectedsignature>0x10020100</avrdeviceexpectedsignature>
     <avrtoolinterface>SWD</avrtoolinterface>
     <com_atmel_avrdbg_tool_samice>
@@ -189,7 +189,7 @@
         <InterfaceName>SWD</InterfaceName>
       </ToolOptions>
       <ToolType>com.atmel.avrdbg.tool.samice</ToolType>
-      <ToolNumber>260106424</ToolNumber>
+      <ToolNumber>260100375</ToolNumber>
       <ToolName>J-Link</ToolName>
     </com_atmel_avrdbg_tool_samice>
     <avrtoolinterfaceclock>4000000</avrtoolinterfaceclock>
@@ -542,6 +542,12 @@
     <None Include="src\ASF\sam0\drivers\port\quick_start\qs_port_basic.h">
       <SubType>compile</SubType>
     </None>
+    <Compile Include="src\globalDefines.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\globalVariables.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\PlaceValueCountCubes.c">
       <SubType>compile</SubType>
     </Compile>

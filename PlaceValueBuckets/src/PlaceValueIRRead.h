@@ -13,8 +13,6 @@
 
 void configure_adc();
 void configure_mux_select();
-void configure_ir_led();
-void turn_on_ir_led();
 void turn_off_ir_led();
 uint16_t adc_start_read_result(const enum adc_positive_input analogPin);
 void ir_sensor_init();

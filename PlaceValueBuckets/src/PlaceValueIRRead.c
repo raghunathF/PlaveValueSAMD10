@@ -13,17 +13,12 @@ uint16_t* adc_result = NULL;
 
 void configure_adc()
 {
-	struct port_config config_port_pin;
-	port_get_config_defaults(&config_port_pin);
-	config_port_pin.direction  = PORT_PIN_DIR_INPUT;
-	port_pin_set_config(TP1, &config_port_pin);
-	
 	struct adc_config conf_adc;
 	adc_get_config_defaults(&conf_adc);
 	adc_result = malloc(sizeof(uint16_t));
 
-	conf_adc.reference			= TP1;
-	conf_adc.clock_prescaler	= ADC_CLOCK_PRESCALER_DIV16;
+	conf_adc.reference			= ADC_REFCTRL_REFSEL_INTVCC0;
+	conf_adc.clock_prescaler	= ADC_CTRLB_PRESCALER_DIV16;
 	conf_adc.positive_input		= 6;
 	conf_adc.negative_input		= ADC_NEGATIVE_INPUT_GND;
 	conf_adc.resolution			= ADC_RESOLUTION_8BIT;
@@ -42,20 +37,6 @@ void configure_mux_select() {
 	port_pin_set_config(MUX_S2, &config_port_pin);
 }
 
-void configure_ir_led() {
-	struct port_config config_port_pin;
-	port_get_config_defaults(&config_port_pin);
-	config_port_pin.direction  = PORT_PIN_DIR_OUTPUT;
-	port_pin_set_config(LED_CNTRL, &config_port_pin);
-}
-
-void turn_on_ir_led(){
-	port_pin_set_output_level(LED_CNTRL, true);
-}
-
-void turn_off_ir_led(){
-	port_pin_set_output_level(LED_CNTRL, false);
-}
 
 uint16_t adc_start_read_result(const enum adc_positive_input analogPin)
 {
@@ -72,6 +53,4 @@ void ir_sensor_init()
 {
 	configure_adc();
 	configure_mux_select();
-	configure_ir_led();
-	turn_on_ir_led();
 }
