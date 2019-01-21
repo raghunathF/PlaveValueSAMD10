@@ -16,6 +16,10 @@ src\PlaceValueIRRead.c
 
 src\PlaceValueIRReadControl.c
 
+src\PlaceValueNeopixel.c
+
+src\PlaceValueNeopxlControl.c
+
 src\ASF\common2\boards\user_board\init.c
 
 src\ASF\common\utils\interrupt\interrupt_sam_nvic.c

@@ -41,21 +41,34 @@ volatile uint16_t tens_array[100];
 volatile uint16_t hndrds_array[100];
 volatile bool temp_cube = false;
 
-void test() {
-	select_mux(false, false, true);
+void test() 
+{
+	static uint8_t tempCount = 0;
+	uint32_t readALL[200];
+	
+	//select_mux(false, false, true);
 	static uint16_t temp = 0;
-	temp_cube = detect_cube(false, true, true, 0);
+	//temp_cube           = detect_cube(false, false, false, 0);
+	select_mux(false, false, false);
 	//delay_ms(10);
-	ones_array[temp] = read_ones();
-	tens_array[temp] = read_tens();
-	hndrds_array[temp] = read_hndrds();
+	ones_array[temp]    = read_ones();
+	tens_array[temp]    = read_tens();
+	hndrds_array[temp]  = read_hndrds();
 	temp++;
-	read_all_values();
+	//read_all_values();
 	if(temp > 200)
 	{
-		temp =0;
 		
+		temp =0;
 	}
+
+	/*
+	readALL[tempCount]= read_all_values();
+	if(tempCount == 200)
+	{
+		tempCount = 0;
+	}
+	*/
 }
 
 int main (void)
