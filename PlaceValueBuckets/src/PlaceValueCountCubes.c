@@ -13,6 +13,10 @@
 #include "globalDefines.h"
 #include <asf.h>
 
+static volatile uint32_t cubes_detected = 0;
+extern  volatile uint8_t cubeOutputs[4];
+
+
 
 bool detect_cube(bool S0, bool S1, bool S2, uint8_t place) {
 	uint16_t value = 0;
@@ -43,17 +47,28 @@ bool detect_cube(bool S0, bool S1, bool S2, uint8_t place) {
 	}
 }
 
+void formatData(uint32_t cubes_detected)
+{
+	uint8_t i = 0;
+	uint32_t temp = 0;
+	for(i=0;i<4;i++)
+	{
+		cubeOutputs[i] = (uint8_t)((cubes_detected >> (24 - 8*i)) & 0xFF) ;
+	}
+	
+}
+
 /*
  * Reads through all different values, detects the cube, 
  * creates an number in the form of the values
  */
-uint32_t read_all_values(){
+void read_all_values(){
 	uint8_t i, place;
 	uint8_t ind;
 	static bool S0;
 	static bool S1;
 	static bool S2;
-    static bool cube;
+    volatile bool cube = false;
 	volatile uint32_t cubes_detected = 0;
 	
 	for (i = 0; i < 8; i++)
@@ -68,7 +83,11 @@ uint32_t read_all_values(){
 			//delay_ms(10);
 			cube = detect_cube(S0, S1, S2, place);
 			//delay_ms(10);
-			cubes_detected = cubes_detected | ( (((uint32_t)cube) & 0x1) << ind );
+			if(cube == true)
+			{
+				cubes_detected = cubes_detected | ( (((uint32_t)cube) & 0x1) << ind );
+				cube = false;
+			}
 			//delay_ms(10);
 		}
 	}
@@ -84,9 +103,10 @@ uint32_t read_all_values(){
 		cube = detect_cube(S0, S1, S2, place);
 		cubes_detected = cubes_detected | ( (((uint32_t)cube) & 0x1) << ind );
 	}
-	return cubes_detected;
-	//delay_ms(10);
+	formatData(cubes_detected);
 }
+
+
 
 
 /*

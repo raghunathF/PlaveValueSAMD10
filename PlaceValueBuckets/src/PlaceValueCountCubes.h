@@ -10,7 +10,7 @@
 #define PLACEVALUECOUNTCUBES_H_
 
 bool detect_cube(bool S0, bool S1, bool S2, uint8_t place);
-uint32_t read_all_values();
+void read_all_values();
 
 
 #endif /* PLACEVALUECOUNTCUBES_H_ */

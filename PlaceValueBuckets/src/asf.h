@@ -52,8 +52,6 @@
  * running the ASF driver selector tool. Any changes will be discarded.
  */
 
-#include "PlaceValuePinout.h"
-
 // From module: ADC - Analog-to-Digital Converter (Callback APIs)
 #include <adc.h>
 #include <adc_callback.h>
@@ -64,6 +62,10 @@
 
 // From module: Common build items for user board support templates
 #include <user_board.h>
+
+// From module: DMAC - Direct Memory Access Controller
+#include <dma.h>
+#include <dma_crc.h>
 
 // From module: Delay routines
 #include <delay.h>
@@ -80,7 +82,20 @@
 // From module: Part identification macros
 #include <parts.h>
 
-// From module: SYSTEM - Clock Management for SAMD09/D10
+// From module: SERCOM Callback API
+#include <sercom.h>
+#include <sercom_interrupt.h>
+
+// From module: SERCOM I2C - Slave Mode I2C (Callback APIs)
+#include <i2c_common.h>
+#include <i2c_slave.h>
+#include <i2c_slave_interrupt.h>
+
+// From module: SERCOM SPI - Serial Peripheral Interface (Callback APIs)
+#include <spi.h>
+#include <spi_interrupt.h>
+
+// From module: SYSTEM - Clock Management for SAMD10
 #include <clock.h>
 #include <gclk.h>
 
@@ -93,10 +108,15 @@
 // From module: SYSTEM - Interrupt Driver
 #include <system_interrupt.h>
 
-// From module: SYSTEM - Power Management for SAM D20/D21/R21/D09/D10/D11/DA/HA
+// From module: SYSTEM - Power Management for SAM D20/D21/R21/D10/D11/DA0/DA1
 #include <power.h>
 
-// From module: SYSTEM - Reset Management for SAM D20/D21/R21/D09/D10/D11/DA/HA
+// From module: SYSTEM - Reset Management for SAM D20/D21/R21/D10/D11/DA0/DA1
 #include <reset.h>
+
+// From module: TC - Timer Counter (Callback APIs)
+#include <tc.h>
+#include <tc_interrupt.h>
+#include "PlaceValuePinout.h"
 
 #endif // ASF_H

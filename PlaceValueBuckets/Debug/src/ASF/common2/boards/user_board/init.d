@@ -1,8 +1,7 @@
 src/ASF/common2/boards/user_board/init.d \
  src/ASF/common2/boards/user_board/init.o: \
  ../src/ASF/common2/boards/user_board/init.c ../src/asf.h \
- ../src/PlaceValuePinout.h ../src/ASF/sam0/drivers/adc/adc.h \
- ../src/ASF/sam0/utils/compiler.h \
+ ../src/ASF/sam0/drivers/adc/adc.h ../src/ASF/sam0/utils/compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.2.1\include\stddef.h \
  ../src/ASF/common/utils/parts.h ../src/ASF/sam0/utils/status_codes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.2.1\include\stdint.h \
@@ -112,13 +111,31 @@ src/ASF/common2/boards/user_board/init.d \
  ../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samd10_d11/system_interrupt_features.h \
  ../src/ASF/sam0/drivers/adc/adc_callback.h \
  ../src/ASF/common2/boards/user_board/user_board.h \
- ../src/config/conf_board.h ../src/ASF/common2/services/delay/delay.h \
+ ../src/config/conf_board.h ../src/ASF/sam0/drivers/dma/dma.h \
+ ../src/config/conf_dma.h ../src/ASF/sam0/drivers/dma/dma_crc.h \
+ ../src/ASF/common2/services/delay/delay.h \
  ../src/ASF/common2/services/delay/sam0/systick_counter.h \
- ../src/ASF/common/boards/board.h ../src/ASF/sam0/drivers/port/port.h
+ ../src/ASF/common/boards/board.h ../src/ASF/sam0/drivers/port/port.h \
+ ../src/ASF/sam0/drivers/sercom/sercom.h \
+ ../src/ASF/sam0/drivers/sercom/sercom_pinout.h \
+ ../src/ASF/sam0/drivers/sercom/sercom_interrupt.h \
+ ../src/ASF/sam0/drivers/sercom/sercom.h \
+ ../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h \
+ ../src/ASF/sam0/drivers/sercom/i2c/i2c_slave.h \
+ ../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h \
+ ../src/ASF/sam0/drivers/sercom/i2c/i2c_slave_interrupt.h \
+ ../src/ASF/sam0/drivers/sercom/i2c/i2c_slave.h \
+ ../src/ASF/sam0/drivers/sercom/spi/spi.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\string.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_locale.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\string.h \
+ ../src/config/conf_spi.h \
+ ../src/ASF/sam0/drivers/sercom/spi/spi_interrupt.h \
+ ../src/ASF/sam0/drivers/sercom/spi/spi.h ../src/ASF/sam0/drivers/tc/tc.h \
+ ../src/ASF/sam0/drivers/tc/tc_interrupt.h \
+ ../src/ASF/sam0/drivers/tc/tc.h ../src/PlaceValuePinout.h
 
 ../src/asf.h:
-
-../src/PlaceValuePinout.h:
 
 ../src/ASF/sam0/drivers/adc/adc.h:
 
@@ -346,6 +363,12 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/config/conf_board.h:
 
+../src/ASF/sam0/drivers/dma/dma.h:
+
+../src/config/conf_dma.h:
+
+../src/ASF/sam0/drivers/dma/dma_crc.h:
+
 ../src/ASF/common2/services/delay/delay.h:
 
 ../src/ASF/common2/services/delay/sam0/systick_counter.h:
@@ -353,3 +376,43 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../src/ASF/common/boards/board.h:
 
 ../src/ASF/sam0/drivers/port/port.h:
+
+../src/ASF/sam0/drivers/sercom/sercom.h:
+
+../src/ASF/sam0/drivers/sercom/sercom_pinout.h:
+
+../src/ASF/sam0/drivers/sercom/sercom_interrupt.h:
+
+../src/ASF/sam0/drivers/sercom/sercom.h:
+
+../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h:
+
+../src/ASF/sam0/drivers/sercom/i2c/i2c_slave.h:
+
+../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h:
+
+../src/ASF/sam0/drivers/sercom/i2c/i2c_slave_interrupt.h:
+
+../src/ASF/sam0/drivers/sercom/i2c/i2c_slave.h:
+
+../src/ASF/sam0/drivers/sercom/spi/spi.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\string.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_locale.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\string.h:
+
+../src/config/conf_spi.h:
+
+../src/ASF/sam0/drivers/sercom/spi/spi_interrupt.h:
+
+../src/ASF/sam0/drivers/sercom/spi/spi.h:
+
+../src/ASF/sam0/drivers/tc/tc.h:
+
+../src/ASF/sam0/drivers/tc/tc_interrupt.h:
+
+../src/ASF/sam0/drivers/tc/tc.h:
+
+../src/PlaceValuePinout.h:

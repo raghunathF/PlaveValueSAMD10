@@ -10,6 +10,9 @@
 #define GLOBALDEFINES_H_
 
 
+#define NOLEDS     3
+#define NoBytesLED 12
+#define STARTZEROS 12*5
 #define CUBE_DETECT_THRESHOLD    50
 
 

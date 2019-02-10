@@ -2,23 +2,45 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+src\ASF\sam0\drivers\tc\tc_interrupt.c
+
+src\ASF\sam0\drivers\tc\tc_sam_d_r\tc.c
+
+src\test.c
+
 src\ASF\common2\services\delay\sam0\systick_counter.c
 
 src\ASF\sam0\drivers\adc\adc_sam_d_r_h\adc.c
 
 src\ASF\sam0\drivers\adc\adc_sam_d_r_h\adc_callback.c
 
+src\ASF\sam0\drivers\dma\dma.c
+
 src\ASF\sam0\drivers\port\port.c
 
+src\ASF\sam0\drivers\sercom\i2c\i2c_sam0\i2c_slave.c
+
+src\ASF\sam0\drivers\sercom\i2c\i2c_sam0\i2c_slave_interrupt.c
+
+src\ASF\sam0\drivers\sercom\sercom.c
+
+src\ASF\sam0\drivers\sercom\sercom_interrupt.c
+
+src\ASF\sam0\drivers\sercom\spi\spi.c
+
+src\ASF\sam0\drivers\sercom\spi\spi_interrupt.c
+
 src\PlaceValueCountCubes.c
+
+src\PlaceValueI2CSlave.c
 
 src\PlaceValueIRRead.c
 
 src\PlaceValueIRReadControl.c
 
-src\PlaceValueNeopixel.c
+src\PlaceValueAddLED.c
 
-src\PlaceValueNeopxlControl.c
+src\PlaceValueAddLEDControl.c
 
 src\ASF\common2\boards\user_board\init.c
 

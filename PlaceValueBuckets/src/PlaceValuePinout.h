@@ -33,6 +33,9 @@
 //#define TP1 PIN_PA03
 
 // Neopixel pin
-#define NEOPXL PIN_PA14
+#define NEOPXL		PIN_PA14
+
+//Detect Pin
+#define DETECT_PIN	PIN_PA24
 
 #endif /* PLACEVALUEPINOUT_H_ */
