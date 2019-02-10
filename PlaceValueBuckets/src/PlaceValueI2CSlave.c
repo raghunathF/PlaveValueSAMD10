@@ -46,8 +46,8 @@ void i2c_read_request_callback(struct i2c_slave_module *const module)
 {
 	static uint8_t count = 0;
 	static uint8_t tempCubeOutputs[4];
-	//if( port_pin_get_input_level(DETECT_PIN) == false)
-	//{
+	if( port_pin_get_input_level(DETECT_PIN) == false)
+	{
 		
 		//delay_cycles_us(2);
 		if(sensorsUpdate == false)
@@ -66,7 +66,13 @@ void i2c_read_request_callback(struct i2c_slave_module *const module)
 		rd_packet.data_length = DATA_LENGTH_SENSORS;
 		rd_packet.data        = tempCubeOutputs;
 		i2c_slave_write_packet_job(module, &rd_packet);
-	//}
+	}
+	else
+	{
+		rd_packet.data_length = 0;
+		rd_packet.data        = tempCubeOutputs;
+		//i2c_slave_write_packet_job(module, &rd_packet);
+	}
 	
 	
 }

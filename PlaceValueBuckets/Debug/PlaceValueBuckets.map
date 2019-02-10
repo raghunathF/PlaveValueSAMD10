@@ -6765,56 +6765,56 @@ LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin
                 0x00000bbe                i2c_slave_write_packet_job
  *fill*         0x00000be6        0x2 
  .text._i2c_slave_interrupt_handler
-                0x00000be8      0x280 src/ASF/sam0/drivers/sercom/i2c/i2c_sam0/i2c_slave_interrupt.o
+                0x00000be8      0x268 src/ASF/sam0/drivers/sercom/i2c/i2c_sam0/i2c_slave_interrupt.o
                 0x00000be8                _i2c_slave_interrupt_handler
  .text._sercom_get_sync_baud_val
-                0x00000e68       0x28 src/ASF/sam0/drivers/sercom/sercom.o
-                0x00000e68                _sercom_get_sync_baud_val
+                0x00000e50       0x28 src/ASF/sam0/drivers/sercom/sercom.o
+                0x00000e50                _sercom_get_sync_baud_val
  .text.sercom_set_gclk_generator
-                0x00000e90       0x4c src/ASF/sam0/drivers/sercom/sercom.o
-                0x00000e90                sercom_set_gclk_generator
+                0x00000e78       0x4c src/ASF/sam0/drivers/sercom/sercom.o
+                0x00000e78                sercom_set_gclk_generator
  .text._sercom_get_default_pad
-                0x00000edc       0xc0 src/ASF/sam0/drivers/sercom/sercom.o
-                0x00000edc                _sercom_get_default_pad
+                0x00000ec4       0xc0 src/ASF/sam0/drivers/sercom/sercom.o
+                0x00000ec4                _sercom_get_default_pad
  .text._sercom_get_sercom_inst_index
-                0x00000f9c       0x38 src/ASF/sam0/drivers/sercom/sercom.o
-                0x00000f9c                _sercom_get_sercom_inst_index
+                0x00000f84       0x38 src/ASF/sam0/drivers/sercom/sercom.o
+                0x00000f84                _sercom_get_sercom_inst_index
  .text._sercom_default_handler
-                0x00000fd4        0x2 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
- *fill*         0x00000fd6        0x2 
+                0x00000fbc        0x2 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
+ *fill*         0x00000fbe        0x2 
  .text._sercom_set_handler
-                0x00000fd8       0x3c src/ASF/sam0/drivers/sercom/sercom_interrupt.o
-                0x00000fd8                _sercom_set_handler
+                0x00000fc0       0x3c src/ASF/sam0/drivers/sercom/sercom_interrupt.o
+                0x00000fc0                _sercom_set_handler
  .text._sercom_get_interrupt_vector
-                0x00001014       0x20 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
-                0x00001014                _sercom_get_interrupt_vector
+                0x00000ffc       0x20 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
+                0x00000ffc                _sercom_get_interrupt_vector
  .text.SERCOM0_Handler
-                0x00001034       0x10 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
-                0x00001034                SERCOM0_Handler
+                0x0000101c       0x10 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
+                0x0000101c                SERCOM0_Handler
  .text.SERCOM1_Handler
-                0x00001044       0x10 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
-                0x00001044                SERCOM1_Handler
+                0x0000102c       0x10 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
+                0x0000102c                SERCOM1_Handler
  .text.SERCOM2_Handler
-                0x00001054       0x10 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
-                0x00001054                SERCOM2_Handler
+                0x0000103c       0x10 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
+                0x0000103c                SERCOM2_Handler
  .text.spi_init
-                0x00001064      0x214 src/ASF/sam0/drivers/sercom/spi/spi.o
-                0x00001064                spi_init
+                0x0000104c      0x214 src/ASF/sam0/drivers/sercom/spi/spi.o
+                0x0000104c                spi_init
  .text._spi_interrupt_handler
-                0x00001278      0x228 src/ASF/sam0/drivers/sercom/spi/spi_interrupt.o
-                0x00001278                _spi_interrupt_handler
+                0x00001260      0x228 src/ASF/sam0/drivers/sercom/spi/spi_interrupt.o
+                0x00001260                _spi_interrupt_handler
  .text.detect_cube
-                0x000014a0       0x58 src/PlaceValueCountCubes.o
-                0x000014a0                detect_cube
+                0x00001488       0x58 src/PlaceValueCountCubes.o
+                0x00001488                detect_cube
  .text.formatData
-                0x000014f8       0x1c src/PlaceValueCountCubes.o
-                0x000014f8                formatData
+                0x000014e0       0x1c src/PlaceValueCountCubes.o
+                0x000014e0                formatData
  .text.read_all_values
-                0x00001514      0x104 src/PlaceValueCountCubes.o
-                0x00001514                read_all_values
+                0x000014fc      0x104 src/PlaceValueCountCubes.o
+                0x000014fc                read_all_values
  .text.i2c_read_request_callback
-                0x00001618       0x44 src/PlaceValueI2CSlave.o
-                0x00001618                i2c_read_request_callback
+                0x00001600       0x5c src/PlaceValueI2CSlave.o
+                0x00001600                i2c_read_request_callback
  .text.configure_i2c_slave
                 0x0000165c       0x98 src/PlaceValueI2CSlave.o
                 0x0000165c                configure_i2c_slave
@@ -7300,7 +7300,7 @@ OUTPUT(PlaceValueBuckets.elf elf32-littlearm)
  .comment       0x00000059       0x5a src/ASF/sam0/utils/syscalls/gcc/syscalls.o
  .comment       0x00000059       0x5a src/main.o
 
-.debug_info     0x00000000    0x428ba
+.debug_info     0x00000000    0x4287d
  .debug_info    0x00000000     0x1ae9 src/ASF/sam0/drivers/tc/tc_interrupt.o
  .debug_info    0x00001ae9      0xb81 src/ASF/common2/services/delay/sam0/systick_counter.o
  .debug_info    0x0000266a     0x3d2f src/ASF/sam0/drivers/adc/adc_sam_d_r_h/adc.o
@@ -7308,25 +7308,25 @@ OUTPUT(PlaceValueBuckets.elf elf32-littlearm)
  .debug_info    0x00007f57     0x32d7 src/ASF/sam0/drivers/dma/dma.o
  .debug_info    0x0000b22e     0x12aa src/ASF/sam0/drivers/port/port.o
  .debug_info    0x0000c4d8     0x4af4 src/ASF/sam0/drivers/sercom/i2c/i2c_sam0/i2c_slave.o
- .debug_info    0x00010fcc     0x3f31 src/ASF/sam0/drivers/sercom/i2c/i2c_sam0/i2c_slave_interrupt.o
- .debug_info    0x00014efd     0x2dcc src/ASF/sam0/drivers/sercom/sercom.o
- .debug_info    0x00017cc9     0x2af8 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
- .debug_info    0x0001a7c1     0x68e4 src/ASF/sam0/drivers/sercom/spi/spi.o
- .debug_info    0x000210a5     0x3188 src/ASF/sam0/drivers/sercom/spi/spi_interrupt.o
- .debug_info    0x0002422d     0x1d1b src/PlaceValueCountCubes.o
- .debug_info    0x00025f48     0x481a src/PlaceValueI2CSlave.o
- .debug_info    0x0002a762     0x28e1 src/PlaceValueIRRead.o
- .debug_info    0x0002d043     0x21a6 src/PlaceValueIRReadControl.o
- .debug_info    0x0002f1e9     0x50f9 src/PlaceValueAddLED.o
- .debug_info    0x000342e2     0x191d src/ASF/common2/boards/user_board/init.o
- .debug_info    0x00035bff      0xafb src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
- .debug_info    0x000366fa     0x364c src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/clock.o
- .debug_info    0x00039d46     0x1e42 src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/gclk.o
- .debug_info    0x0003bb88     0x13e6 src/ASF/sam0/drivers/system/pinmux/pinmux.o
- .debug_info    0x0003cf6e      0xa67 src/ASF/sam0/drivers/system/system.o
- .debug_info    0x0003d9d5     0x1ab0 src/ASF/sam0/utils/cmsis/samd10/source/gcc/startup_samd10.o
- .debug_info    0x0003f485      0xd8c src/ASF/sam0/utils/syscalls/gcc/syscalls.o
- .debug_info    0x00040211     0x26a9 src/main.o
+ .debug_info    0x00010fcc     0x3ebf src/ASF/sam0/drivers/sercom/i2c/i2c_sam0/i2c_slave_interrupt.o
+ .debug_info    0x00014e8b     0x2dcc src/ASF/sam0/drivers/sercom/sercom.o
+ .debug_info    0x00017c57     0x2af8 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
+ .debug_info    0x0001a74f     0x68e4 src/ASF/sam0/drivers/sercom/spi/spi.o
+ .debug_info    0x00021033     0x3188 src/ASF/sam0/drivers/sercom/spi/spi_interrupt.o
+ .debug_info    0x000241bb     0x1d1b src/PlaceValueCountCubes.o
+ .debug_info    0x00025ed6     0x484f src/PlaceValueI2CSlave.o
+ .debug_info    0x0002a725     0x28e1 src/PlaceValueIRRead.o
+ .debug_info    0x0002d006     0x21a6 src/PlaceValueIRReadControl.o
+ .debug_info    0x0002f1ac     0x50f9 src/PlaceValueAddLED.o
+ .debug_info    0x000342a5     0x191d src/ASF/common2/boards/user_board/init.o
+ .debug_info    0x00035bc2      0xafb src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+ .debug_info    0x000366bd     0x364c src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/clock.o
+ .debug_info    0x00039d09     0x1e42 src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/gclk.o
+ .debug_info    0x0003bb4b     0x13e6 src/ASF/sam0/drivers/system/pinmux/pinmux.o
+ .debug_info    0x0003cf31      0xa67 src/ASF/sam0/drivers/system/system.o
+ .debug_info    0x0003d998     0x1ab0 src/ASF/sam0/utils/cmsis/samd10/source/gcc/startup_samd10.o
+ .debug_info    0x0003f448      0xd8c src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_info    0x000401d4     0x26a9 src/main.o
 
 .debug_abbrev   0x00000000     0x58e9
  .debug_abbrev  0x00000000      0x2ff src/ASF/sam0/drivers/tc/tc_interrupt.o
@@ -7356,7 +7356,7 @@ OUTPUT(PlaceValueBuckets.elf elf32-littlearm)
  .debug_abbrev  0x0000531c      0x257 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
  .debug_abbrev  0x00005573      0x376 src/main.o
 
-.debug_loc      0x00000000     0x867b
+.debug_loc      0x00000000     0x866b
  .debug_loc     0x00000000      0x168 src/ASF/sam0/drivers/tc/tc_interrupt.o
  .debug_loc     0x00000168       0xe4 src/ASF/common2/services/delay/sam0/systick_counter.o
  .debug_loc     0x0000024c      0x891 src/ASF/sam0/drivers/adc/adc_sam_d_r_h/adc.o
@@ -7364,23 +7364,23 @@ OUTPUT(PlaceValueBuckets.elf elf32-littlearm)
  .debug_loc     0x00000e27      0x53a src/ASF/sam0/drivers/dma/dma.o
  .debug_loc     0x00001361      0x13d src/ASF/sam0/drivers/port/port.o
  .debug_loc     0x0000149e      0x981 src/ASF/sam0/drivers/sercom/i2c/i2c_sam0/i2c_slave.o
- .debug_loc     0x00001e1f      0x3e0 src/ASF/sam0/drivers/sercom/i2c/i2c_sam0/i2c_slave_interrupt.o
- .debug_loc     0x000021ff      0x979 src/ASF/sam0/drivers/sercom/sercom.o
- .debug_loc     0x00002b78      0x139 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
- .debug_loc     0x00002cb1     0x2a9c src/ASF/sam0/drivers/sercom/spi/spi.o
- .debug_loc     0x0000574d      0x6a4 src/ASF/sam0/drivers/sercom/spi/spi_interrupt.o
- .debug_loc     0x00005df1      0x25a src/PlaceValueCountCubes.o
- .debug_loc     0x0000604b      0x19b src/PlaceValueI2CSlave.o
- .debug_loc     0x000061e6      0x4ca src/PlaceValueIRRead.o
- .debug_loc     0x000066b0      0x2a8 src/PlaceValueIRReadControl.o
- .debug_loc     0x00006958      0x3cc src/PlaceValueAddLED.o
- .debug_loc     0x00006d24      0xec1 src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/clock.o
- .debug_loc     0x00007be5      0x504 src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/gclk.o
- .debug_loc     0x000080e9      0x36d src/ASF/sam0/drivers/system/pinmux/pinmux.o
- .debug_loc     0x00008456       0x20 src/ASF/sam0/drivers/system/system.o
- .debug_loc     0x00008476       0x40 src/ASF/sam0/utils/cmsis/samd10/source/gcc/startup_samd10.o
- .debug_loc     0x000084b6       0xef src/ASF/sam0/utils/syscalls/gcc/syscalls.o
- .debug_loc     0x000085a5       0xd6 src/main.o
+ .debug_loc     0x00001e1f      0x39b src/ASF/sam0/drivers/sercom/i2c/i2c_sam0/i2c_slave_interrupt.o
+ .debug_loc     0x000021ba      0x979 src/ASF/sam0/drivers/sercom/sercom.o
+ .debug_loc     0x00002b33      0x139 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
+ .debug_loc     0x00002c6c     0x2a9c src/ASF/sam0/drivers/sercom/spi/spi.o
+ .debug_loc     0x00005708      0x6a4 src/ASF/sam0/drivers/sercom/spi/spi_interrupt.o
+ .debug_loc     0x00005dac      0x25a src/PlaceValueCountCubes.o
+ .debug_loc     0x00006006      0x1d0 src/PlaceValueI2CSlave.o
+ .debug_loc     0x000061d6      0x4ca src/PlaceValueIRRead.o
+ .debug_loc     0x000066a0      0x2a8 src/PlaceValueIRReadControl.o
+ .debug_loc     0x00006948      0x3cc src/PlaceValueAddLED.o
+ .debug_loc     0x00006d14      0xec1 src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/clock.o
+ .debug_loc     0x00007bd5      0x504 src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/gclk.o
+ .debug_loc     0x000080d9      0x36d src/ASF/sam0/drivers/system/pinmux/pinmux.o
+ .debug_loc     0x00008446       0x20 src/ASF/sam0/drivers/system/system.o
+ .debug_loc     0x00008466       0x40 src/ASF/sam0/utils/cmsis/samd10/source/gcc/startup_samd10.o
+ .debug_loc     0x000084a6       0xef src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_loc     0x00008595       0xd6 src/main.o
 
 .debug_aranges  0x00000000      0x718
  .debug_aranges
@@ -7612,7 +7612,7 @@ OUTPUT(PlaceValueBuckets.elf elf32-littlearm)
  .debug_macro   0x00018291      0x122 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
  .debug_macro   0x000183b3      0x6be src/main.o
 
-.debug_line     0x00000000    0x1325a
+.debug_line     0x00000000    0x13253
  .debug_line    0x00000000      0xa03 src/ASF/sam0/drivers/tc/tc_interrupt.o
  .debug_line    0x00000a03      0x953 src/ASF/common2/services/delay/sam0/systick_counter.o
  .debug_line    0x00001356      0xcc4 src/ASF/sam0/drivers/adc/adc_sam_d_r_h/adc.o
@@ -7620,25 +7620,25 @@ OUTPUT(PlaceValueBuckets.elf elf32-littlearm)
  .debug_line    0x00002bab      0xc00 src/ASF/sam0/drivers/dma/dma.o
  .debug_line    0x000037ab      0x88c src/ASF/sam0/drivers/port/port.o
  .debug_line    0x00004037      0xd3a src/ASF/sam0/drivers/sercom/i2c/i2c_sam0/i2c_slave.o
- .debug_line    0x00004d71      0xf72 src/ASF/sam0/drivers/sercom/i2c/i2c_sam0/i2c_slave_interrupt.o
- .debug_line    0x00005ce3      0xb52 src/ASF/sam0/drivers/sercom/sercom.o
- .debug_line    0x00006835      0xacc src/ASF/sam0/drivers/sercom/sercom_interrupt.o
- .debug_line    0x00007301     0x1306 src/ASF/sam0/drivers/sercom/spi/spi.o
- .debug_line    0x00008607      0xcaf src/ASF/sam0/drivers/sercom/spi/spi_interrupt.o
- .debug_line    0x000092b6      0xdf5 src/PlaceValueCountCubes.o
- .debug_line    0x0000a0ab      0xe26 src/PlaceValueI2CSlave.o
- .debug_line    0x0000aed1      0xe8f src/PlaceValueIRRead.o
- .debug_line    0x0000bd60      0xde1 src/PlaceValueIRReadControl.o
- .debug_line    0x0000cb41      0xee0 src/PlaceValueAddLED.o
- .debug_line    0x0000da21      0xd40 src/ASF/common2/boards/user_board/init.o
- .debug_line    0x0000e761      0x85f src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
- .debug_line    0x0000efc0      0xbdd src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/clock.o
- .debug_line    0x0000fb9d      0xc09 src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/gclk.o
- .debug_line    0x000107a6      0x8d9 src/ASF/sam0/drivers/system/pinmux/pinmux.o
- .debug_line    0x0001107f      0x980 src/ASF/sam0/drivers/system/system.o
- .debug_line    0x000119ff      0x5dc src/ASF/sam0/utils/cmsis/samd10/source/gcc/startup_samd10.o
- .debug_line    0x00011fdb      0x409 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
- .debug_line    0x000123e4      0xe76 src/main.o
+ .debug_line    0x00004d71      0xf56 src/ASF/sam0/drivers/sercom/i2c/i2c_sam0/i2c_slave_interrupt.o
+ .debug_line    0x00005cc7      0xb52 src/ASF/sam0/drivers/sercom/sercom.o
+ .debug_line    0x00006819      0xacc src/ASF/sam0/drivers/sercom/sercom_interrupt.o
+ .debug_line    0x000072e5     0x1306 src/ASF/sam0/drivers/sercom/spi/spi.o
+ .debug_line    0x000085eb      0xcaf src/ASF/sam0/drivers/sercom/spi/spi_interrupt.o
+ .debug_line    0x0000929a      0xdf5 src/PlaceValueCountCubes.o
+ .debug_line    0x0000a08f      0xe3b src/PlaceValueI2CSlave.o
+ .debug_line    0x0000aeca      0xe8f src/PlaceValueIRRead.o
+ .debug_line    0x0000bd59      0xde1 src/PlaceValueIRReadControl.o
+ .debug_line    0x0000cb3a      0xee0 src/PlaceValueAddLED.o
+ .debug_line    0x0000da1a      0xd40 src/ASF/common2/boards/user_board/init.o
+ .debug_line    0x0000e75a      0x85f src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+ .debug_line    0x0000efb9      0xbdd src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/clock.o
+ .debug_line    0x0000fb96      0xc09 src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/gclk.o
+ .debug_line    0x0001079f      0x8d9 src/ASF/sam0/drivers/system/pinmux/pinmux.o
+ .debug_line    0x00011078      0x980 src/ASF/sam0/drivers/system/system.o
+ .debug_line    0x000119f8      0x5dc src/ASF/sam0/utils/cmsis/samd10/source/gcc/startup_samd10.o
+ .debug_line    0x00011fd4      0x409 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_line    0x000123dd      0xe76 src/main.o
 
 .debug_str      0x00000000    0x710f4
  .debug_str     0x00000000    0x677f3 src/ASF/sam0/drivers/tc/tc_interrupt.o

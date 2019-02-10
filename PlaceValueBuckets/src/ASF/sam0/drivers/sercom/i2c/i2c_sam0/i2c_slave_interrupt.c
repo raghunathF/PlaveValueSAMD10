@@ -327,10 +327,12 @@ void _i2c_slave_interrupt_handler(
 
 			if (module->buffer_length == 0) {
 				/* Data buffer not set up, NACK address, workaround 13574*/
-				_i2c_slave_set_ctrlb_ackact(module, false);
+				//_i2c_slave_set_ctrlb_ackact(module, false);
 			} else {
-				/* ACK address, workaround 13574 */
-				_i2c_slave_set_ctrlb_ackact(module, true);
+				
+					/* ACK address, workaround 13574 */
+					_i2c_slave_set_ctrlb_ackact(module, true);
+				
 			}
 		} else {
 			/* Set transfer direction in dev inst */
