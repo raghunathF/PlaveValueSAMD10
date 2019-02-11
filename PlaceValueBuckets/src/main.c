@@ -106,6 +106,7 @@ int main (void)
 
 	/* Insert application code here, after the board has been initialized. */
 	while(true) {
+		//fadeREDControlled();
 		read_all_values();
 		//testADDLED();
 		//fadeREDControlled();

@@ -15,7 +15,9 @@
 
 static volatile uint32_t cubes_detected = 0;
 extern  volatile uint8_t cubeOutputs[4];
+extern volatile bool sensorsUpdate;
 
+#define CUBE_MATCH_THRESHOLD 25
 
 
 bool detect_cube(bool S0, bool S1, bool S2, uint8_t place) {
@@ -51,11 +53,39 @@ void formatData(uint32_t cubes_detected)
 {
 	uint8_t i = 0;
 	uint32_t temp = 0;
+	
+	sensorsUpdate = true;
 	for(i=0;i<4;i++)
 	{
 		cubeOutputs[i] = (uint8_t)((cubes_detected >> (24 - 8*i)) & 0xFF) ;
 	}
+	sensorsUpdate = false;
 	
+}
+
+//Filter cubes detected to remove any noise during the drop of the cubes
+//Cubes which stay in thier position for 300 msec are considered stable
+uint32_t filterData(uint32_t cubes_detected)
+{
+	static uint32_t prevCubesDetected = 0;
+	static uint16_t cubeMatchCount = 0;
+	static uint32_t filteredValue = 0;
+	
+	if(cubes_detected == prevCubesDetected)
+	{
+		cubeMatchCount ++;
+		if(cubeMatchCount > CUBE_MATCH_THRESHOLD)
+		{
+			cubeMatchCount =0;
+			filteredValue = cubes_detected;
+		}
+	}
+	else
+	{
+		cubeMatchCount = 0;
+	}
+	prevCubesDetected = cubes_detected;
+	return filteredValue;
 }
 
 /*
@@ -69,7 +99,9 @@ void read_all_values(){
 	static bool S1;
 	static bool S2;
     volatile bool cube = false;
-	volatile uint32_t cubes_detected = 0;
+	uint32_t cubes_detected = 0;
+	uint32_t cubes_detected_filtered= 0;
+	static uint32_t prev_cubes_detected_filtered = 0;
 	
 	for (i = 0; i < 8; i++)
 	{
@@ -103,7 +135,14 @@ void read_all_values(){
 		cube = detect_cube(S0, S1, S2, place);
 		cubes_detected = cubes_detected | ( (((uint32_t)cube) & 0x1) << ind );
 	}
-	formatData(cubes_detected);
+	
+	cubes_detected_filtered = filterData(cubes_detected); // If the cube is placed there for 200 msec than assume that we have a cube there
+	 
+	if(cubes_detected_filtered != prev_cubes_detected_filtered)
+	{
+		formatData(cubes_detected_filtered);
+	}
+	prev_cubes_detected_filtered = cubes_detected_filtered;
 }
 
 
