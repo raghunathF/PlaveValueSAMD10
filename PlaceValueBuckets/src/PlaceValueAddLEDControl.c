@@ -61,49 +61,32 @@ void RGBPI55SetAllLED(colorInfo*  colorLED)
 	uint16_t startArrayAddress = 0;
 	static uint8_t counter = 31;
 	uint8_t i,j =0;
+	
 	//SPIMasterInit();
+	
 	for(j = 0 ; j < NOLEDS ; j++)
 	{
 		LEDSPIData			= convertColorSPIData(&colorLED[j]);
-		startArrayAddress   = j*NoBytesLED + STARTZEROS ;
+		startArrayAddress   = j*NoBytesLED + STARTZEROS;
 		for(i = 0 ; i < NoBytesLED ; i++)
 		{
 			DMASourceRegister[i+startArrayAddress]   = LEDSPIData[i] ;
 		}
 	}
-	
+	/*
 	//port_pin_set_output_level(PROFILE_PIN,true);
 	while(transferOngoing == true);
+	SPIMasterInit();
 	while(dma_start_transfer_job(&example_resource) == STATUS_OK);
-	/*
-	while(transferDone == false)
-	{
-		
-		if(counter>30)
-		{
-			
-			//delay_cycles_us(1);
-			counter = 0;
-			while(dma_start_transfer_job(&example_resource) == STATUS_OK);
-			
-		}
-		counter++;
-		delay_cycles_us(30);
-	}
-	
-	*/
-	//disableLEDSPI();
+	while(transferDone == false);
+	//delay_cycles_ms(5);
+	clearMOSI();
+	disableLEDSPI();
 	//clearMOSI();
-	//port_pin_set_output_level(PROFILE_PIN,false);
-	
-	
-	//{
-	//	 errr= dma_start_transfer_job(&example_resource);
-	//	delay_cycles_ms(1);
-	//}
 	
 	transferOngoing = false;
 	transferDone = false;
+	*/
 }
 
 
@@ -115,7 +98,7 @@ void RGBPI55SetLED(uint8_t LEDNumber , colorInfo color_led )
 	uint8_t* LEDSPIData = NULL;
 	uint8_t  LEDNU[12];
 	//enable SPI
-	SPIMasterInit();
+	
 	startArrayAddress = LEDNumber*NoBytesLED + STARTZEROS ;
 	LEDSPIData = convertColorSPIData(&color_led);
 	for(i = 0 ; i < NoBytesLED ; i++)
@@ -124,7 +107,9 @@ void RGBPI55SetLED(uint8_t LEDNumber , colorInfo color_led )
 	}
 	
 	while(transferOngoing == true);
-	dma_start_transfer_job(&example_resource);
+	SPIMasterInit();
+	//dma_start_transfer_job(&example_resource);
+	while(dma_start_transfer_job(&example_resource) == STATUS_OK);
 	while(transferDone == false);
 	//disable SPI
 	disableLEDSPI();

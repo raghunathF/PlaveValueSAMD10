@@ -11,6 +11,7 @@
 
 
 void fadeREDControlled();
+void updaeteADDLED();
 void testADDLED();
 void testTimer();
 

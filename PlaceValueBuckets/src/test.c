@@ -9,6 +9,7 @@
 #include "PlaceValueAddLEDControl.h"
 
 struct  tc_module    tcTest;
+static  updateLED = false;
 
 void fadeRED()
 {
@@ -77,11 +78,44 @@ void testADDLED()
 	fadeRED();
 }
 
+void updaeteADDLED()
+{
+	
+	static colorInfo testColor[3];
+	static uint8_t count = 0;
+	
+	if(updateLED == true)
+	{
+		updateLED = false;
+		testColor[0].RBrightness =	count;
+		testColor[0].GBrightness =	0;
+		testColor[0].BBrightness =	0;
+	
+		testColor[1].RBrightness =	0;
+		testColor[1].GBrightness =	count;
+		testColor[1].BBrightness =	0;
+	
+		testColor[2].RBrightness =	0;
+		testColor[2].GBrightness =	0;
+		testColor[2].BBrightness =	count;
+	
+		count++;
+		RGBPI55SetAllLED(testColor);
+		if(count > 255 )
+		{
+			count = 0;
+		}
+	}
+	
+	
+}
+
 void updateLEDMatrix()
 {
 	
+	updateLED = true;
 	
-	port_pin_toggle_output_level(NEOPXL);
+	//port_pin_toggle_output_level(NEOPXL);
 	//updateSPIValues();
 }
 
@@ -115,7 +149,7 @@ void setTestPin()
 void testTimer()
 {
 	//Set a test pin as output
-	setTestPin();
+	//setTestPin();
 	//inittimer
 	initTimer();
 	initTimerCallbacks();

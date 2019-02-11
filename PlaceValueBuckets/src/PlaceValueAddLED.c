@@ -25,6 +25,7 @@ void sourceRegisterInit()
 	{
 		DMASourceRegister[i]	=	0x88;
 	}
+   //DMASourceRegister[NOLEDS*NoBytesLED]	=	0x88;
 	for(i=NOLEDS*NoBytesLED;i<STARTZEROS;i++)
 	{
 		DMASourceRegister[i]    =   0x00;
@@ -78,7 +79,7 @@ static void setup_transfer_descriptor(DmacDescriptor *descriptor )
 	descriptor_config.source_address = (uint32_t)DMASourceRegister+blockTransferCount;
 	//descriptor_config.destination_address = 0x42000C28; //sercom1
 	descriptor_config.destination_address = 0x42000828; //sercom0
-	descriptor_config.next_descriptor_address = 0;
+	descriptor_config.next_descriptor_address = (uint32_t)descriptor;
 	dma_descriptor_create(descriptor, &descriptor_config);
 
 }
@@ -90,6 +91,7 @@ void setup_DMA()
 	dma_add_descriptor(&example_resource, &example_descriptor);
 	dma_register_callback(&example_resource, transfer_done, DMA_CALLBACK_TRANSFER_DONE);
 	dma_enable_callback(&example_resource, DMA_CALLBACK_TRANSFER_DONE);
+	while(dma_start_transfer_job(&example_resource) == STATUS_OK);
 }
 
 void configureSPIMaster(void)
@@ -105,7 +107,7 @@ void configureSPIMaster(void)
 	config_spi_master.pinmux_pad3 = CONF_MASTER_PINMUX_PAD3;
 	config_spi_master.receiver_enable  = false;
 	config_spi_master.mode_specific.master.baudrate =  SPIBAUDRATE; //2.5MHz  = 400ns per signal
-	config_spi_master.generator_source = GCLK_GENERATOR_0;
+	config_spi_master.generator_source = GCLK_GENERATOR_3;
 	spi_init(&spi_master_instance, CONF_MASTER_SPI_MODULE, &config_spi_master);
 	spi_enable(&spi_master_instance);
 }

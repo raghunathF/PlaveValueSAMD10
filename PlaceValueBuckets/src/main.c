@@ -99,18 +99,21 @@ int main (void)
 	RGBPI55Init();
 	//delay_cycles_ms(1000);
 	setI2CDetect();
-	//testTimer();
+	
 	
 	configure_i2c_slave();
 	configure_i2c_slave_callbacks();
+	testTimer();
 
 	/* Insert application code here, after the board has been initialized. */
 	while(true) {
 		//fadeREDControlled();
+		updaeteADDLED();
 		read_all_values();
 		//testADDLED();
 		//fadeREDControlled();
 		//readI2CDetect();
+		//fadeRED();
 		delay_ms(10);
 	}
 }

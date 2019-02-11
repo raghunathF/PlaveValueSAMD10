@@ -18,7 +18,7 @@ void configure_adc()
 	adc_result = malloc(sizeof(uint16_t));
 
 	conf_adc.reference			= ADC_REFCTRL_REFSEL_INTVCC0;
-	conf_adc.clock_prescaler	= ADC_CTRLB_PRESCALER_DIV16;
+	conf_adc.clock_prescaler	= ADC_CTRLB_PRESCALER_DIV256;
 	conf_adc.positive_input		= 6;
 	conf_adc.negative_input		= ADC_NEGATIVE_INPUT_GND;
 	conf_adc.resolution			= ADC_RESOLUTION_8BIT;
