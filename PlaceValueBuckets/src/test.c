@@ -83,28 +83,43 @@ void updaeteADDLED()
 	
 	static colorInfo testColor[3];
 	static uint8_t count = 0;
-	
+	static bool increment = true;
 	if(updateLED == true)
 	{
 		updateLED = false;
 		testColor[0].RBrightness =	count;
-		testColor[0].GBrightness =	0;
-		testColor[0].BBrightness =	0;
+		testColor[0].GBrightness =	count;
+		testColor[0].BBrightness =	count;
 	
-		testColor[1].RBrightness =	0;
+		testColor[1].RBrightness =	count;
 		testColor[1].GBrightness =	count;
-		testColor[1].BBrightness =	0;
+		testColor[1].BBrightness =  count;
 	
-		testColor[2].RBrightness =	0;
-		testColor[2].GBrightness =	0;
+		testColor[2].RBrightness =	count;
+		testColor[2].GBrightness =	count;
 		testColor[2].BBrightness =	count;
 	
-		count++;
+		//count++;
 		RGBPI55SetAllLED(testColor);
-		if(count > 255 )
+		if(increment == true)
 		{
-			count = 0;
+			count++;
+			if(count > 50 )
+			{
+				increment = false;
+				
+			}
 		}
+		else
+		{
+			count --;
+			if(count < 1)
+			{
+				increment = true;
+			}
+			
+		}
+		
 	}
 	
 	
@@ -133,7 +148,7 @@ void initTimer()
 	config_tc.enable_capture_on_channel[0]		=		true;
 	config_tc.counter_size						=		TC_COUNTER_SIZE_16BIT; //8
 	config_tc.clock_source						=		GCLK_GENERATOR_0 ;
-	config_tc.clock_prescaler					=		TC_CLOCK_PRESCALER_DIV64; //1024
+	config_tc.clock_prescaler					=		TC_CLOCK_PRESCALER_DIV8; //1024
 	config_tc.counter_8_bit.period				=		0xFF;
 	tc_init(&tcTest, TC1 , &config_tc);
 	tc_enable(&tcTest);
