@@ -15,7 +15,6 @@ void configure_i2c_slave_callbacks(void);
 struct i2c_slave_packet packet;
 struct i2c_slave_packet rd_packet;
 
-#define SLAVE_ADDRESS			  0x12
 #define DATA_LENGTH_SENSORS		  4
 #define CONF_I2C_SLAVE_MODULE     SERCOM2
 

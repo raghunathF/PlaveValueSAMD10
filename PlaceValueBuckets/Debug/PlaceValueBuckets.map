@@ -3470,7 +3470,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e src/PlaceValueI2CSlave.o
  .debug_macro   0x00000000       0x6c src/PlaceValueI2CSlave.o
  .debug_macro   0x00000000       0x58 src/PlaceValueI2CSlave.o
- .debug_macro   0x00000000       0x22 src/PlaceValueI2CSlave.o
+ .debug_macro   0x00000000       0x28 src/PlaceValueI2CSlave.o
  .group         0x00000000        0x8 src/PlaceValueIRRead.o
  .group         0x00000000        0x8 src/PlaceValueIRRead.o
  .group         0x00000000        0x8 src/PlaceValueIRRead.o
@@ -4186,7 +4186,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e src/PlaceValueAddLED.o
  .debug_macro   0x00000000       0x6c src/PlaceValueAddLED.o
  .debug_macro   0x00000000       0x58 src/PlaceValueAddLED.o
- .debug_macro   0x00000000       0x22 src/PlaceValueAddLED.o
+ .debug_macro   0x00000000       0x28 src/PlaceValueAddLED.o
  .group         0x00000000        0x8 src/PlaceValueAddLEDControl.o
  .group         0x00000000        0x8 src/PlaceValueAddLEDControl.o
  .group         0x00000000        0x8 src/PlaceValueAddLEDControl.o
@@ -4432,7 +4432,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e src/PlaceValueAddLEDControl.o
  .debug_macro   0x00000000       0x6c src/PlaceValueAddLEDControl.o
  .debug_macro   0x00000000       0x58 src/PlaceValueAddLEDControl.o
- .debug_macro   0x00000000       0x22 src/PlaceValueAddLEDControl.o
+ .debug_macro   0x00000000       0x28 src/PlaceValueAddLEDControl.o
  .debug_macro   0x00000000       0x2e src/PlaceValueAddLEDControl.o
  .group         0x00000000        0x8 src/ASF/common2/boards/user_board/init.o
  .group         0x00000000        0x8 src/ASF/common2/boards/user_board/init.o
@@ -6484,7 +6484,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e src/main.o
  .debug_macro   0x00000000       0x6c src/main.o
  .debug_macro   0x00000000       0x58 src/main.o
- .debug_macro   0x00000000       0x22 src/main.o
+ .debug_macro   0x00000000       0x28 src/main.o
  .debug_macro   0x00000000       0x2e src/main.o
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.2.1/thumb/v6-m\libgcc.a(_udivsi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.2.1/thumb/v6-m\libgcc.a(_udivsi3.o)
@@ -7616,8 +7616,8 @@ OUTPUT(PlaceValueBuckets.elf elf32-littlearm)
  .debug_macro   0x000145e1       0x35 src/ASF/sam0/drivers/sercom/spi/spi.o
  .debug_macro   0x00014616      0x577 src/ASF/sam0/drivers/sercom/spi/spi_interrupt.o
  .debug_macro   0x00014b8d      0x671 src/PlaceValueCountCubes.o
- .debug_macro   0x000151fe       0x22 src/PlaceValueCountCubes.o
- .debug_macro   0x00015220      0x67d src/PlaceValueI2CSlave.o
+ .debug_macro   0x000151fe       0x28 src/PlaceValueCountCubes.o
+ .debug_macro   0x00015226      0x677 src/PlaceValueI2CSlave.o
  .debug_macro   0x0001589d      0x663 src/PlaceValueIRRead.o
  .debug_macro   0x00015f00      0x66e src/PlaceValueIRReadControl.o
  .debug_macro   0x0001656e      0x670 src/PlaceValueAddLED.o
@@ -7704,18 +7704,18 @@ OUTPUT(PlaceValueBuckets.elf elf32-littlearm)
                               0x697ff (size before relaxing)
  .debug_str     0x0006df3b      0x16a src/ASF/sam0/drivers/sercom/spi/spi_interrupt.o
                               0x6878d (size before relaxing)
- .debug_str     0x0006e0a5      0x18b src/PlaceValueCountCubes.o
-                              0x696f6 (size before relaxing)
- .debug_str     0x0006e230      0x1d4 src/PlaceValueI2CSlave.o
+ .debug_str     0x0006e0a5      0x19e src/PlaceValueCountCubes.o
+                              0x69709 (size before relaxing)
+ .debug_str     0x0006e243      0x1c1 src/PlaceValueI2CSlave.o
                               0x6a7c5 (size before relaxing)
  .debug_str     0x0006e404      0x108 src/PlaceValueIRRead.o
                               0x6a5ea (size before relaxing)
  .debug_str     0x0006e50c       0x21 src/PlaceValueIRReadControl.o
                               0x692e0 (size before relaxing)
  .debug_str     0x0006e52d      0x2f6 src/PlaceValueAddLED.o
-                              0x6b1f4 (size before relaxing)
+                              0x6b207 (size before relaxing)
  .debug_str     0x0006e823      0x142 src/PlaceValueAddLEDControl.o
-                              0x69938 (size before relaxing)
+                              0x6994b (size before relaxing)
  .debug_str     0x0006e965       0x3e src/ASF/common2/boards/user_board/init.o
                               0x6906e (size before relaxing)
  .debug_str     0x0006e9a3       0x66 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
@@ -7733,7 +7733,7 @@ OUTPUT(PlaceValueBuckets.elf elf32-littlearm)
  .debug_str     0x00071367      0x75b src/ASF/sam0/utils/syscalls/gcc/syscalls.o
                                0x7256 (size before relaxing)
  .debug_str     0x00071ac2       0xc6 src/main.o
-                              0x69c6a (size before relaxing)
+                              0x69c7d (size before relaxing)
 
 .debug_frame    0x00000000     0x13ec
  .debug_frame   0x00000000       0x7c src/ASF/sam0/drivers/tc/tc_interrupt.o

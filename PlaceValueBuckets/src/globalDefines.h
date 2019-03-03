@@ -16,4 +16,6 @@
 #define CUBE_DETECT_THRESHOLD    50
 
 
+#define SLAVE_ADDRESS 0x12
+
 #endif /* GLOBALDEFINES_H_ */

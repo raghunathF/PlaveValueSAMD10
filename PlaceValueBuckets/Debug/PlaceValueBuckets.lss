@@ -8453,7 +8453,7 @@ int main (void)
 	testTimer();
     2a56:	4b0c      	ldr	r3, [pc, #48]	; (2a88 <main+0x50>)
     2a58:	4798      	blx	r3
-
+   
 	/* Insert application code here, after the board has been initialized. */
 	while(true) {
 		//fadeREDControlled();

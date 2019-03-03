@@ -104,7 +104,7 @@ int main (void)
 	configure_i2c_slave();
 	configure_i2c_slave_callbacks();
 	testTimer();
-
+   
 	/* Insert application code here, after the board has been initialized. */
 	while(true) {
 		//fadeREDControlled();
